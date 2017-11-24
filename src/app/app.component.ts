@@ -13,12 +13,12 @@ export class AppComponent {
 
   userName = '';
   searchName() {
-  this.http.get('https://api.github.com/users' + this.userName)
+  this.http.get('https://api.github.com/users/' + this.userName)
   .subscribe (
-    // (res.Response) => {
-    //   const githubUsername = res.json();
-    //   console.log(githubUsername);
-    // }
+    (res:Response) => {
+      const githubUsername = res.json();
+      console.log(githubUsername);
+    }
   )
 }
 

@@ -6,4 +6,6 @@ export class UsernameService {
 
   constructor(private http: Http) { }
 
+  // getUsername():
+
 }
