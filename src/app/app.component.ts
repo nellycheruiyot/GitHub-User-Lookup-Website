@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,12 @@ export class AppComponent {
   userName = '';
   searchName() {
   this.http.get('https://api.github.com/users' + this.userName)
+  .subscribe (
+    // (res.Response) => {
+    //   const githubUsername = res.json();
+    //   console.log(githubUsername);
+    // }
+  )
 }
 
 }
