@@ -17,7 +17,7 @@ export class AppComponent {
   .subscribe (
     (res:Response) => {
       const githubUsername = res.json();
-      console.log(githubUsername)
+      console.log(githubUsername);
     }
   )
 }
