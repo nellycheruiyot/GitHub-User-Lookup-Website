@@ -1,8 +1,17 @@
 <div class="container">
   <h1>{{title}}</h1>
   <div class="box">
-    <input id="location" type="text" [(ngModel)]=userName>
+    <input placeholder="Username" [(ngModel)]=userName>
     <button class="button" id="name" (click)=searchName()>Search</button>
     <div class="showName"></div>
   </div>
+</div>
+<div>
+  <h3>{{githubInfo.login}}</h3>
+  <p>UserName: {{githubInfo.login}}</p>
+  <p>Joined GitHub On: {{githubInfo.created_at}}</p>
+  <p>Followers: {{githubInfo.followers}}</p>
+  <p>Following: {{githubInfo.following}}</p>
+  <p>Public Repositories: {{githubInfo.public_repos}}</p>
+  <p>Visit User's Page: <a href="{{githubInfo.html_url}}">{{githubInfo.html_url}}</a></p>
 </div>
