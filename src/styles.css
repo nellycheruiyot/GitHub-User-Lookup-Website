@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+.jumbotron{
+  text-align: center;
+  color: #369;
+  font-size: 120%;
+}
+
+.main{
+	/*background-image: url('./assets/background.jpg');
+	background-size: cover;
+	overflow-x: hidden;
+	height: 100%;*/
+}
+
+.about, .userDetails{
+	width:80%;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 2px 20px 20px 20px;
+	margin: 10px auto;
+	border: .05px solid #ccc;
+	box-shadow: 0 0 1px grey;
+	border-radius: 10px;
+}
+
+.box{
+  margin: 10px auto;
+}
+
+input{
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: .05px solid #ccc;
+}
+
+.button{
+  background-color: #369;
+  color: white;
+  border: .05px solid #369;
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+}
