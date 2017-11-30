@@ -13,17 +13,31 @@
           <div class="showName"></div>
         </div>
       <!-- </div> -->
-        <div>
-          <img src="{{githubInfo.avatar_url}}" height="250">
+        <div class="row" *ngIf="githubInfo">
+          <div class="column left">
+            <img src="{{githubInfo.avatar_url}}" height="250">
+          </div>
+          <div class="column right">
+            <h4>{{githubInfo.login}} GitHub user info</h4>
+            <p>UserName: {{githubInfo.login}}</p>
+            <p>Joined GitHub On: {{githubInfo.created_at}}</p>
+            <p>Followers: {{githubInfo.followers}}</p>
+            <p>Following: {{githubInfo.following}}</p>
+            <p>Public Repositories: {{githubInfo.public_repos}}</p>
+            <p>Visit User's Page: <a href="{{githubInfo.html_url}}">{{githubInfo.html_url}}</a></p>
+          </div>
         </div>
-        <div>
-          <h3>{{githubInfo.login}}</h3>
-          <p>UserName: {{githubInfo.login}}</p>
-          <p>Joined GitHub On: {{githubInfo.created_at}}</p>
-          <p>Followers: {{githubInfo.followers}}</p>
-          <p>Following: {{githubInfo.following}}</p>
-          <p>Public Repositories: {{githubInfo.public_repos}}</p>
-          <p>Visit User's Page: <a href="{{githubInfo.html_url}}">{{githubInfo.html_url}}</a></p>
+        <div class="reposResults" *ngIf="public_repos">
+          <h4>{{githubInfo.login}}'s repositories:</h4>
+          <ol>
+            <li *ngFor="let repo of public_repos">
+              <p>Repository name: {{repo.name}}</p>
+              <p placeholder="User didn't include a description in this repo!">Repository description: {{repo.description}}</p>
+              <p>Repository clone Url:<a target="_blank" href="{{repo.clone_url}}"> {{repo.clone_url}}</a></p>
+              <p>Date of creation: {{repo.created_at}}</p>
+              <p>Repository last updated: {{repo.updated_at}}</p>
+            </li>
+          </ol>
         </div>
     </div>
   </main>
