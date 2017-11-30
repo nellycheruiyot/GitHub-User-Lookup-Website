@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="reposResults" *ngIf="public_repos">
-          <h4>{{githubInfo.login}}'s repositories:</h4>
+          <h4>{{githubInfo.login}}'s Public Repositories:</h4>
           <ol>
             <li *ngFor="let repo of public_repos">
               <p>Repository name: {{repo.name}}</p>
@@ -42,7 +42,3 @@
     </div>
   </main>
 </div>
-<!-- <div>
-  <h3>Public Repositories:</h3>
-  <h4>{{public_repos.created_at}}</h4>
-</div> -->
