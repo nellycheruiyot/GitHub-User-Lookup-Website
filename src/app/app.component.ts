@@ -27,7 +27,6 @@ export class AppComponent {
     (res:Response) => {
       const githubUser = res.json();
       this.githubInfo=githubUser;
-      // this.public_repos=githubUser;
       console.log(githubUser);
      }
     )
@@ -39,21 +38,9 @@ export class AppComponent {
     (res:Response) => {
       const githubRepoInfo = res.json();
       this.public_repos=githubRepoInfo;
-      // this.public_repos=githubUser;
       console.log(githubRepoInfo);
      }
     )
   }
-// searchPublicRepos() {
-//   this.http.get('res.repos_url')
-//   // this.http.get('https://api.github.com/users/repos' + this.public_repos)
-//   .subscribe (
-//     (res:Response) => {
-//       const githubUserRepo = res.json();
-//       this.public_repos=githubUserRepo;
-//       console.log(githubUserRepo);
-//     }
-//   )
-// }
 
 }
